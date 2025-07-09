@@ -37,11 +37,13 @@ export default function HpInput({operationName, maxHp, bgColor, onSubmit}:HpInpu
         type="number"
         placeholder="0"
         min={0}
-        max={maxHp}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onBlur={handleSubmit}
         onKeyDown={(e) => {
+          if (e.key === '-' || e.key === '+') {
+             e.preventDefault();
+          }
           if (e.key === 'Enter') {
             handleSubmit()
           }
