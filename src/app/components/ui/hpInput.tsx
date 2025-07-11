@@ -32,7 +32,7 @@ export default function HpInput({operationName, maxHp, bgColor, onSubmit}:HpInpu
 }
 
   return(
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-1">
       <input
         type="number"
         placeholder="0"
@@ -48,9 +48,9 @@ export default function HpInput({operationName, maxHp, bgColor, onSubmit}:HpInpu
             handleSubmit()
           }
         }}
-        className={`w-12 text-center text-sm rounded px-1 py-0.5 ${colorClasses[bgColor]} border-none outline-none text-white`}
+        className={`w-12 text-center text-sm rounded px-1 py-0.5 ${colorClasses[bgColor]} border-none outline-none placeholder-white`}
         />
-        <p className="text-xs text-[#787878]">{operationName}</p>
+        <p className="text-xs text-white">{operationName}</p>
     </div>
   )
 }
